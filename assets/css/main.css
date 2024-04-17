@@ -468,6 +468,8 @@ input, select, textarea {
 	.test img {
 		width: 100%; /* 图片宽度设置为容器宽度的百分比 */
 		height: auto; /* 自动计算图片高度，保持原始宽高比例 */
+		margin-bottom: 0;
+		border:0;
 	  }
 
 /* Row */
