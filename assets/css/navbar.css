@@ -71,3 +71,14 @@
     background: #5cb874;
     color: #fff;
   }
+
+  div .landing-pic {
+    display: block;
+    border: 0;
+    margin: 0;
+  }
+
+  .landing-pic img {
+    max-width: 100%; /* 图片的最大宽度为父元素的宽度 */
+    height: auto; /* 图片高度自动调整，根据宽度的缩放比例 */
+}
