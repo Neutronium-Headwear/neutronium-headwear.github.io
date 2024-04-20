@@ -1,20 +1,37 @@
+function throttle(func, limit) {
+    let lastFunc;
+    let lastRan;
+    return function() {
+        const context = this;
+        const args = arguments;
+        if (!lastRan) {
+            func.apply(context, args);
+            lastRan = Date.now();
+        } else {
+            clearTimeout(lastFunc);
+            lastFunc = setTimeout(function() {
+                if ((Date.now() - lastRan) >= limit) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                }
+            }, limit - (Date.now() - lastRan));
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const texts = document.querySelectorAll('.overlay-text');
-
-    // 存储每个文本的初始字体大小
     const initialFontSizes = Array.from(texts, text => parseFloat(window.getComputedStyle(text).fontSize));
-    console.log(`The original font size is: ${initialFontSizes}`)
 
-    window.addEventListener('scroll', () => {
+    const handleScroll = throttle(function() {
         const scrollY = window.scrollY;
-
         texts.forEach((text, index) => {
-            // 基于初始字体大小计算新的字体大小
-            const newFontSize = initialFontSizes[index] + scrollY / 2;  // 根据滚动距离递增字体大小
-            const newOpacity = Math.max(0, 1 - scrollY / 750);  // 透明度逐渐减少
-
+            const newFontSize = initialFontSizes[index] + scrollY / 80;
+            const newOpacity = Math.max(0, 1 - scrollY / 500);
             text.style.fontSize = `${newFontSize}px`;
             text.style.opacity = newOpacity;
         });
-    });
+    }, 5);  // Update every 50 milliseconds
+
+    window.addEventListener('scroll', handleScroll);
 });
