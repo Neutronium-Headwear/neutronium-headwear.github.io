@@ -72,17 +72,6 @@
   color: #fff;
 }
 
-div .landing-pic {
-  display: block;
-  border: 0;
-  margin: 0;
-}
-
-.landing-pic img {
-  max-width: 100%; /* 图片的最大宽度为父元素的宽度 */
-  height: auto; /* 图片高度自动调整，根据宽度的缩放比例 */
-}
-
 /* 根据不同屏幕尺寸设置不同的左右间距 */
 @media screen and (max-width: 1680px) {
   .navbar a,
@@ -92,6 +81,11 @@ div .landing-pic {
   }
   .navbar ul {
     padding-left: 30px; /* Add .navbar before ul */
+  }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 100px;
   }
 }
 
@@ -104,6 +98,11 @@ div .landing-pic {
   .navbar ul {
     padding-left: 20px; /* Add .navbar before ul */
   }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 70px;
+  }
 }
 
 @media screen and (max-width: 736px) {
@@ -114,6 +113,11 @@ div .landing-pic {
   }
   .navbar ul {
     padding-left: 10px; /* Add .navbar before ul */
+  }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 40px;
   }
 }
 
@@ -126,4 +130,41 @@ div .landing-pic {
   .navbar ul {
     padding-left: 5px; /* Add .navbar before ul */
   }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 30px;
+  }
+}
+
+.image-container {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* 容器宽度100%，确保图片可以充满容器 */
+  border: 0;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-text {
+  color: white;
 }
