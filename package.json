@@ -1,0 +1,23 @@
+{
+  "name": "neutronium-headwear.github.io",
+  "version": "1.0.0",
+  "description": "A webpage for neutronum-headwear",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neutronium-Headwear/neutronium-headwear.github.io.git"
+  },
+  "author": "David Liang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neutronium-Headwear/neutronium-headwear.github.io/issues"
+  },
+  "homepage": "https://github.com/Neutronium-Headwear/neutronium-headwear.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
+  }
+}
