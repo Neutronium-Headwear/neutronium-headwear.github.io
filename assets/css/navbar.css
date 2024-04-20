@@ -72,6 +72,23 @@
   color: #fff;
 }
 
+/* 当屏幕宽度大于1680像素时 */
+@media screen and (min-width: 1681px) {
+  .navbar a,
+  .navbar a:focus {
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+  .navbar ul {
+    padding-left: 40px; /* Add .navbar before ul */
+  }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 120px;
+  }
+}
+
 /* 根据不同屏幕尺寸设置不同的左右间距 */
 @media screen and (max-width: 1680px) {
   .navbar a,

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         texts.forEach((text, index) => {
             // 基于初始字体大小计算新的字体大小
             const newFontSize = initialFontSizes[index] + scrollY / 2;  // 根据滚动距离递增字体大小
-            const newOpacity = Math.max(0, 1 - scrollY / 500);  // 透明度逐渐减少
+            const newOpacity = Math.max(0, 1 - scrollY / 750);  // 透明度逐渐减少
 
             text.style.fontSize = `${newFontSize}px`;
             text.style.opacity = newOpacity;
