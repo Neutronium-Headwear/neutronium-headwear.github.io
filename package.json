@@ -4,7 +4,8 @@
   "description": "A webpage for neutronum-headwear",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "build": "echo \"Running build script...\""
   },
   "repository": {
     "type": "git",
