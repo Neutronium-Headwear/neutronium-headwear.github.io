@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const handleScroll = throttle(function() {
         const scrollY = window.scrollY;
         texts.forEach((text, index) => {
-            const newFontSize = initialFontSizes[index] + scrollY / 80;
+            const newFontSize = initialFontSizes[index] + scrollY / 20;
             const newOpacity = Math.max(0, 1 - scrollY / 500);
             text.style.fontSize = `${newFontSize}px`;
             text.style.opacity = newOpacity;
         });
-    }, 5);  // Update every 50 milliseconds
+    }, 0.01);
 
     window.addEventListener('scroll', handleScroll);
 });
