@@ -167,10 +167,10 @@
         }
 
         body:not(.is-touch) .tiles article:hover > .image {
-            -moz-transform: scale(1.1);
-            -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-            transform: scale(1.1);
+            -moz-transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
         }
 
             body:not(.is-touch) .tiles article:hover > .image:before {
@@ -204,15 +204,28 @@
         opacity: 1;
     }
 
-    @media screen and (min-width: 981px) {
+    @media screen and (min-width: 1281px) {
 
         .tiles {
-            margin: -2.5em 0 0 -2.5em;
+            margin: -0.5em 0 0 -0.5em;
         }
 
             .tiles article {
-                width: calc(50% - 2.5em);
-                margin: 2.5em 0 0 2.5em;
+                width: calc(25% - 0.6em);
+                margin: 0.6em 0 0 0.6em;
+            }
+
+    }
+
+    @media screen and (max-width: 1280px) {
+
+        .tiles {
+            margin: -1.25em 0 0 -1.25em;
+        }
+
+            .tiles article {
+                width: calc(33.33333% - 1.25em);
+                margin: 1.25em 0 0 1.25em;
             }
 
     }
