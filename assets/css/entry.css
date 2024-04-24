@@ -142,6 +142,10 @@
                     margin-bottom: 0;
                 }
 
+        .tiles article.style0 > .image:before {
+            background-color: rgba(199, 91, 155, 0.2);
+        }
+
         .tiles article.style1 > .image:before {
             background-color: #f2849e;
         }
