@@ -188,7 +188,6 @@
 }
 
 .section-title h2 {
-  font-size: calc(inherit + 5px);
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -220,7 +219,41 @@
 
 .section-title p {
   margin-bottom: 0;
-  font-size: calc(inherit + 8px);
   color: #919191;
   text-align: left;
 }
+
+.about p {
+  font-size: 21pt;
+}
+
+  @media screen and (max-width: 1680px) {
+
+    .about p {
+      font-size: 17pt;
+    }
+
+  }
+
+  @media screen and (max-width: 1280px) {
+
+    .about p {
+      font-size: 15pt;
+    }
+
+  }
+
+  @media screen and (max-width: 736px) {
+
+    .about p {
+      font-size: 14pt;
+    }
+
+  }
+
+  @media screen and (max-width: 360px) {
+
+    .about p {
+      font-size: 13pt;
+    }
+  } 

@@ -39,7 +39,7 @@
   white-space: nowrap;
   transition: 0.3s;
   text-decoration: none; 
-  padding: 10px 0; /* 默认的上下间距 */
+  padding: 10px 0;
 }
 
 .navbar a i,
@@ -53,12 +53,12 @@
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: #5cb874;
+  color: rgba(82, 75, 79, 0.3);
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  color: #5cb874;
+  color: rgba(199, 91, 155, 0.3);
   padding: 8px 25px;
   margin-left: 30px;
   border-radius: 4px;
@@ -69,7 +69,7 @@
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
-  background: #5cb874;
+  background: rgba(199, 91, 155, 0.3);
   color: #fff;
 }
 
@@ -185,4 +185,78 @@
 
 .overlay-text {
   color: white;
+}
+
+.navbar .dropdown ul {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(255, 255, 255, 0.75); /* 设置背景颜色和透明度 */
+  transition: 0.3s;
+  width: 400px; /* 容纳两列，根据需要调整宽度 */
+  border-radius: 8px; /* 添加圆角 */
+}
+
+.navbar .dropdown ul li {
+  width: 50%;         /* 每个项目占据一半宽度，形成两列 */
+  box-sizing: border-box; /* 包括padding和border在内的宽度计算 */
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  display: block;     /* 使链接填充整个li元素 */
+  white-space: nowrap; /* 防止文字折行 */
+}
+
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown ul a i {
+  font-size: inherit;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: rgba(49, 36, 99, 0.3);
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
 }
