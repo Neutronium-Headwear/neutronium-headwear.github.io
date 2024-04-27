@@ -5,6 +5,10 @@
 * Desktop Navigation 
 */
 
+header {
+  padding-bottom: 70px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -73,88 +77,6 @@
   color: #fff;
 }
 
-/* 当屏幕宽度大于1680像素时 */
-@media screen and (min-width: 1681px) {
-  .navbar a,
-  .navbar a:focus {
-      padding-left: 30px;
-      padding-right: 30px;
-  }
-  .navbar ul {
-    padding-left: 40px; /* Add .navbar before ul */
-  }
-
-  .overlay-text {
-    padding: 0;
-    font-size: 120px;
-  }
-}
-
-/* 根据不同屏幕尺寸设置不同的左右间距 */
-@media screen and (max-width: 1680px) {
-  .navbar a,
-  .navbar a:focus {
-      padding-left: 20px;
-      padding-right: 20px;
-  }
-  .navbar ul {
-    padding-left: 30px; /* Add .navbar before ul */
-  }
-
-  .overlay-text {
-    padding: 0;
-    font-size: 100px;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .navbar a,
-  .navbar a:focus {
-      padding-left: 15px;
-      padding-right: 15px;
-  }
-  .navbar ul {
-    padding-left: 20px; /* Add .navbar before ul */
-  }
-
-  .overlay-text {
-    padding: 0;
-    font-size: 70px;
-  }
-}
-
-@media screen and (max-width: 736px) {
-  .navbar a,
-  .navbar a:focus {
-      padding-left: 10px;
-      padding-right: 10px;
-  }
-  .navbar ul {
-    padding-left: 10px; /* Add .navbar before ul */
-  }
-
-  .overlay-text {
-    padding: 0;
-    font-size: 40px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .navbar a,
-  .navbar a:focus {
-      padding-left: 5px;
-      padding-right: 5px;
-  }
-  .navbar ul {
-    padding-left: 5px; /* Add .navbar before ul */
-  }
-
-  .overlay-text {
-    padding: 0;
-    font-size: 30px;
-  }
-}
-
 .image-container {
   position: relative;
   display: block;
@@ -198,9 +120,8 @@
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: rgba(255, 255, 255, 0.75); /* 设置背景颜色和透明度 */
+  background: rgba(255, 255, 255, 0.9); /* 设置背景颜色和透明度 */
   transition: 0.3s;
-  width: 400px; /* 容纳两列，根据需要调整宽度 */
   border-radius: 8px; /* 添加圆角 */
 }
 
@@ -258,5 +179,128 @@
 
   .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
+  }
+}
+
+/* navbar setting */
+
+/* 当屏幕宽度大于1680像素时 */
+@media screen and (min-width: 1681px) {
+  .navbar a,
+  .navbar a:focus {
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+  .navbar ul {
+    padding-left: 40px; /* Add .navbar before ul */
+  }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 120px;
+  }
+
+  .navbar .dropdown ul a {
+    font-size:medium
+  }
+
+  .navbar .dropdown ul {
+    width: 375px; /* 容纳两列，根据需要调整宽度 */
+  }
+}
+
+/* 根据不同屏幕尺寸设置不同的左右间距 */
+@media screen and (max-width: 1680px) {
+  .navbar a,
+  .navbar a:focus {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  .navbar ul {
+    padding-left: 30px; /* Add .navbar before ul */
+  }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 100px;
+  }
+  .navbar .dropdown ul a {
+    font-size:medium
+  }
+
+  .navbar .dropdown ul {
+    width: 325px; /* 容纳两列，根据需要调整宽度 */
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .navbar a,
+  .navbar a:focus {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .navbar ul {
+    padding-left: 20px; /* Add .navbar before ul */
+  }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 70px;
+  }
+
+  .navbar .dropdown ul a {
+    font-size:small
+  }
+
+  .navbar .dropdown ul {
+    width: 275px; /* 容纳两列，根据需要调整宽度 */
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .navbar a,
+  .navbar a:focus {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  .navbar ul {
+    padding-left: 10px; /* Add .navbar before ul */
+  }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 40px;
+  }
+
+  .navbar .dropdown ul a {
+    font-size:x-small
+  }
+
+  .navbar .dropdown ul {
+    width: 250px; /* 容纳两列，根据需要调整宽度 */
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .navbar a,
+  .navbar a:focus {
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  .navbar ul {
+    padding-left: 5px; /* Add .navbar before ul */
+  }
+
+  .overlay-text {
+    padding: 0;
+    font-size: 30px;
+  }
+
+  .navbar .dropdown ul a {
+    font-size:xx-small
+  }
+
+  .navbar .dropdown ul {
+    width: 250px; /* 容纳两列，根据需要调整宽度 */
   }
 }
