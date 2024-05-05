@@ -215,8 +215,8 @@
         }
 
             .tiles article {
-                width: calc(25% - 0.6em);
-                margin: 0.6em 0 0 0.6em;
+                width: calc(25% - 3em);
+                margin: 3em 0 0 3em;
             }
 
     }
@@ -228,8 +228,8 @@
         }
 
             .tiles article {
-                width: calc(33.33333% - 1.25em);
-                margin: 1.25em 0 0 1.25em;
+                width: calc(33.33333% - 3em);
+                margin: 3em 0 0 3em;
             }
 
     }
