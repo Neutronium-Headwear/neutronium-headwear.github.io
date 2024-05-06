@@ -248,7 +248,7 @@ padding-bottom: 50px;
 
 
 .faq-title .content {
-    font-size: 23pt;
+    font-size: 30px;
 }
 
 }
@@ -256,7 +256,7 @@ padding-bottom: 50px;
 @media screen and (max-width: 1280px) {
 
 .faq-title .content {
-    font-size: 17pt;
+    font-size: 25px;
 }
 
 }
@@ -264,7 +264,7 @@ padding-bottom: 50px;
 @media screen and (max-width: 736px) {
 
 .faq-title .content {
-    font-size: 16pt;
+    font-size: 16px;
 }
 
 }
@@ -272,6 +272,6 @@ padding-bottom: 50px;
 @media screen and (max-width: 360px) {
 
 .faq-title .content {
-    font-size: 15pt;
+    font-size: 12px;
 }
 } 
