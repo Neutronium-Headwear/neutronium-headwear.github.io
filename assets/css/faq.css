@@ -32,23 +32,29 @@ padding-bottom: 80px;
     margin-bottom: 20px; /* 添加底部边距，使其与下面的内容有一定的间隔 */
 }
 
-.qa .question {
-    text-align: center; 
-    font-weight: bold;
+.question .action {
+  width: 15px;              /* 指定宽度 */
+  height: 15px;             /* 指定高度 */
+  display: inline-block;    /* 确保图标以块级元素显示，支持宽高设置 */
+  text-align: center;       /* 图标内部居中对齐 */
+  line-height: 15px;        /* 线高与高度一致，确保图标垂直居中 */
 }
 
-.qa .question::after {
-    content: "";
-    display: block;
-    width: 60%;
-    height: 1px;
-    background-color: #ccc;
-    margin: 0 auto;
-    margin-top: 5px; /* 控制横线与文本之间的垂直间距 */
+.qa .question {
+  display: flex;            /* 使用flex布局，确保内容水平对齐 */
+  align-items: center;      /* 垂直居中对齐所有子元素 */
+  text-align: center;         /* 问题文本左对齐 */
 }
 
 .qa .answer {
-    color: #706e6e;
+  color: #706e6e;
+  display: none;            /* 默认隐藏答案 */
+  text-align: left;         /* 确保答案文本左对齐 */
+  display: none;
+}
+
+.qa .question i.action {
+  margin-right: 30px;       /* 确保图标和问题文本之间有间隔 */
 }
 
 /*--------------------------------------------------------------
@@ -242,6 +248,11 @@ padding-bottom: 80px;
 
 .faq-title i{
     padding-right: 10px;
+}
+
+.faq-title .action{
+  padding-right: 40px;
+  cursor: pointer;
 }
 
 

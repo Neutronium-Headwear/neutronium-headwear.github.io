@@ -14,10 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 var linkUrl = link.getAttribute('href');
                 if (linkUrl) {
                     var linkPage = linkUrl.split('/').pop(); // Get the last segment of the href attribute
-                    console.log(`link: ${linkPage}, ${currentUrl}`)
                     if (linkPage === currentUrl) {
                         link.classList.add('active');
-                        console.log(`The ${linkUrl} is activated, link: ${link}, ${currentUrl}`)
                         setActive = true;
                     }
                     if (linkUrl.includes("product-entry.html")) {
@@ -26,8 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
 
-            console.log(`setActive: ${setActive}`)
-            console.log(`link: ${productLink}`)
             if (!setActive) {
                 productLink.classList.add('active'); 
             }
@@ -47,9 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
 const dropdown_initialize = () => {
     const productsLink = document.querySelector('.navbar li:nth-child(2) a');
     const dropdownMenu = document.querySelector('.dropdown');
-
-    console.log(productsLink)
-    console.log(dropdownMenu)
 
     // 鼠标悬停在 'Products' 链接上显示下拉菜单
     productsLink.addEventListener('mouseover', function () {
