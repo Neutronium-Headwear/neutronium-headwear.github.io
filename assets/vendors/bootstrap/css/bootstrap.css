@@ -775,6 +775,26 @@ progress {
     max-width: 1320px;
   }
 }
+@media (min-width: 1600px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1480px;
+  }
+}
+@media (min-width: 1800px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1600px;
+  }
+}
+@media (min-width: 2000px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1800px;
+  }
+}
+@media (min-width: 2300px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 2080px;
+  }
+}
 :root {
   --bs-breakpoint-xs: 0;
   --bs-breakpoint-sm: 576px;
@@ -782,6 +802,10 @@ progress {
   --bs-breakpoint-lg: 992px;
   --bs-breakpoint-xl: 1200px;
   --bs-breakpoint-xxl: 1400px;
+  --bs-breakpoint-xxl: 1600px;
+  --bs-breakpoint-xxl: 1800px;
+  --bs-breakpoint-xxl: 2000px;
+  --bs-breakpoint-xxl: 2300px;
 }
 
 .row {

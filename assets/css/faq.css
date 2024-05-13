@@ -19,7 +19,7 @@ padding-bottom: 50px;
 /* extentions for header */
 
 header {
-padding-bottom: 50px;
+padding-bottom: 80px;
 }
 
 /*-----------------------------------------------------
@@ -242,6 +242,11 @@ padding-bottom: 50px;
 
 .faq-title i{
     padding-right: 10px;
+}
+
+
+.faq-title .content {
+  font-size: 35px;
 }
 
 @media screen and (max-width: 1680px) {

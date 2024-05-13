@@ -37,7 +37,7 @@
   /* extentions for header */
 
   header {
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
 
 /*--------------------------------------------------------------
@@ -92,7 +92,6 @@
 
 .services .icon-box p {
   line-height: 24px;
-  font-size: 14px;
   margin-bottom: 0;
 }
 
@@ -235,37 +234,64 @@
   text-align: left;
 }
 
-.about p {
+.about p{
   font-size: 21pt;
+}
+
+.services .icon-box p{
+  font-size: 20pt;
+  line-height: 1.5;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.services .icon-box h4{
+  font-size: 21pt;
+}
+
+@media screen and (max-width: 2000px) {
+
+  .about p, .services .icon-box h4 {
+    font-size: 20pt;
+  }
+
+  .services .icon-box p {
+    font-size: 19pt;
+  }
 }
 
   @media screen and (max-width: 1680px) {
 
-    .about p {
+    .about p, .services .icon-box h4 {
+      font-size: 18pt;
+    }
+  
+    .services .icon-box p {
       font-size: 17pt;
     }
-
   }
 
   @media screen and (max-width: 1280px) {
 
-    .about p {
-      font-size: 15pt;
+    .about p, .services .icon-box h4 {
+      font-size: 14pt;
     }
+  
+    .services .icon-box p {
+      font-size: 13pt;
+    }
+    
 
   }
 
   @media screen and (max-width: 736px) {
 
-    .about p {
-      font-size: 14pt;
+    .about p, .services .icon-box h4 {
+      font-size: 13pt;
+    }
+  
+    .services .icon-box p {
+      font-size: 12pt;
     }
 
   }
-
-  @media screen and (max-width: 360px) {
-
-    .about p {
-      font-size: 13pt;
-    }
-  } 
